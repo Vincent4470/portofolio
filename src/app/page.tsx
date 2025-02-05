@@ -307,7 +307,7 @@ export default function Home() {
 
       <footer className="border-t">
         <div className="container mx-auto px-4 py-6 text-center text-sm text-muted-foreground">
-          © 2025 Rendev. All rights reserved.
+          © 2025 HeyCent. All rights reserved.
         </div>
       </footer>
     </div>

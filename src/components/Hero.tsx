@@ -39,8 +39,8 @@ const HeroSection = () => {
       <div className="flex gap-4 mt-6">
         <button className="bg-blue-500 px-6 py-2 rounded-lg">Contact Me</button>
         <a
-          href="../public/Vincent Etwin Mangapul.pdf"
-          download="Vincent Etwin Mangapul.pdf"
+          href="./Vincent Etwin Mangapul.pdf"
+          download="./Vincent Etwin Mangapul.pdf"
           className="flex items-center bg-gray-700 px-6 py-2 rounded-lg"
         >
           <Download className="mr-2 h-4 w-4" /> Download CV

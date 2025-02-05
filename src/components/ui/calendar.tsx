@@ -1,6 +1,9 @@
+'use client';
+
 import * as React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { DayPicker } from 'react-day-picker';
+import { CustomComponents, DayPicker } from 'react-day-picker';
+
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '@/components/ui/button';
 
@@ -50,16 +53,12 @@ function Calendar({
         day_hidden: 'invisible',
         ...classNames,
       }}
-      renderNav={(props) => (
-        <>
-          <button {...props.previousButtonProps} className="absolute left-1">
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <button {...props.nextButtonProps} className="absolute right-1">
-            <ChevronRight className="h-4 w-4" />
-          </button>
-        </>
-      )}
+      components={{
+        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" {...props} />,
+        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" {...props} />,
+      } as Partial<CustomComponents>}
+      
+      
       {...props}
     />
   );
